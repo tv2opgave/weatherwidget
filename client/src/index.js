@@ -7,8 +7,6 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 import store from './store'
 
-store.subscribe(x => console.log('store', x))
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

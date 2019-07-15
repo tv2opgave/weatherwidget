@@ -16,7 +16,7 @@ const formatWeatherData = data => {
   }
 
   return {
-    error: data.message
+    message: data.message
   };
 };
 
@@ -25,12 +25,12 @@ const fetchCurrentWeatherData = async search => {
     { q: search, appid, units: "metric" }
   ).toString()}`;
 
-  console.log('fetching', url)
+  console.log("fetching", url);
 
   try {
     const response = await fetch(url);
     const data = await response.json();
-    return formatWeatherData(data)
+    return formatWeatherData(data);
   } catch (e) {
     console.info("Fetch failed", url, e);
     return {
