@@ -1,0 +1,14 @@
+{
+  "name": "tv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd client && npm install && cd ../server && npm install",
+    "start": "cd client && npm run build && cd .. && node build.js && cd server && npm start",
+    "test": "cd client && npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
